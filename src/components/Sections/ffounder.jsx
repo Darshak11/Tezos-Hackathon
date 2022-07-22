@@ -5,9 +5,9 @@ import BlogBox from "../Elements/BlogBox";
 import FullButton from "../Buttons/FullButton";
 import TestimonialSlider from "../Elements/TestimonialSlider";
 
-export default function Blog() {
+export default function Ffounder() {
   return (
-    <Wrapper id="blog">
+    <Wrapper id="ffounder">
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>

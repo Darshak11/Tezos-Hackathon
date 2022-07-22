@@ -12,9 +12,9 @@ import ProjectImg5 from "../../assets/img/projects/5.png";
 import ProjectImg6 from "../../assets/img/projects/6.png";
 import AddImage2 from "../../assets/img/add/add2.png";
 
-export default function Projects() {
+export default function FManagers() {
   return (
-    <Wrapper id="projects">
+    <Wrapper id="fmanager">
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>

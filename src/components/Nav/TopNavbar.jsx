@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
-import LogoIcon from "../../assets/svg/Logo";
+import LogoIcon from "../../assets/svg/logo.svg";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 
 export default function TopNavbar() {
@@ -27,9 +27,11 @@ export default function TopNavbar() {
       <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}>
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
-            <LogoIcon />
+            <LogoWrapper className="flexCenter">
+              <ImgStyle src={LogoIcon} alt="logo" />
+            </LogoWrapper>
             <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
-              fanatic
+              TezAngel
             </h1>
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
@@ -42,28 +44,23 @@ export default function TopNavbar() {
               </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
-                Services
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="invest" spy={true} smooth={true} offset={-80}>
+                For investors
               </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
-                Projects
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="fmanager" spy={true} smooth={true} offset={-80}>
+                For Fund Managers
               </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
-                Blog
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
-                Pricing
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="ffounder" spy={true} smooth={true} offset={-80}>
+                For Founders
               </Link>
             </li>
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
-                Contact
+                Contact Us
               </Link>
             </li>
           </UlWrapper>
@@ -118,5 +115,17 @@ const UlWrapperRight = styled.ul`
     display: none;
   }
 `;
-
-
+const LogoWrapper = styled.div`
+  width: 120px;
+  height: 100px;
+  cursor: pointer;
+  :focus-visible {
+    outline: none;
+    border: 0px;
+  }
+`;
+const ImgStyle = styled.img`
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+`;

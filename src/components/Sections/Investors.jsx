@@ -10,9 +10,9 @@ import AddImage2 from "../../assets/img/add/2.png";
 import AddImage3 from "../../assets/img/add/3.png";
 import AddImage4 from "../../assets/img/add/4.png";
 
-export default function Services() {
+export default function investors() {
   return (
-    <Wrapper id="services">
+    <Wrapper id="invest">
       <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
           <ClientSlider />
